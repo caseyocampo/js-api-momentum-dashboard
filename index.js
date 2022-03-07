@@ -1,4 +1,10 @@
-let imageAuthorEl = document.getElementById('imageAuthorEl')
+const imageAuthorEl = document.getElementById('imageAuthorEl')
+const coinImage = document.getElementById('coinImage')
+const coinName = document.getElementById('coinName')
+const currentPrice = document.getElementById('currentPrice')
+const dayHigh = document.getElementById('dayHigh')
+const dayLow = document.getElementById('dayLow')
+const currentTimeEl = document.getElementById('currentTimeEl')
 
 fetch(
     'https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature'
@@ -14,12 +20,6 @@ fetch(
         document.body.style.backgroundImage =
             'url(http://placekitten.com/1000/1000)'
     })
-
-const coinImage = document.getElementById('coinImage')
-const coinName = document.getElementById('coinName')
-const currentPrice = document.getElementById('currentPrice')
-const dayHigh = document.getElementById('dayHigh')
-const dayLow = document.getElementById('dayLow')
 
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
     .then(res => {
@@ -37,3 +37,12 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
         dayLow.textContent = `24-hour Low: ${data.market_data.low_24h.usd}`
     })
     .catch(err => console.error(err))
+
+const time = new Date()
+const currentTime = time.toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+})
+
+currentTimeEl.textContent = currentTime

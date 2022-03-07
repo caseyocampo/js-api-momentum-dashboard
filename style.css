@@ -42,7 +42,12 @@ main {
     gap: 1em;
 }
 
+.crypto-price:not(:last-child) {
+    margin-bottom: 0.25em;
+}
+
 .time {
     align-self: center;
     font-size: 3rem;
+    margin-top: -125px;
 }
