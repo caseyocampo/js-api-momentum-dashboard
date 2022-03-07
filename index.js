@@ -17,6 +17,9 @@ fetch(
 
 const coinImage = document.getElementById('coinImage')
 const coinName = document.getElementById('coinName')
+const currentPrice = document.getElementById('currentPrice')
+const dayHigh = document.getElementById('dayHigh')
+const dayLow = document.getElementById('dayLow')
 
 fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
     .then(res => {
@@ -29,5 +32,8 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
         console.log(data)
         coinImage.src = data.image.small
         coinName.textContent = data.name
+        currentPrice.textContent = `Current price: ${data.market_data.current_price.usd} USD`
+        dayHigh.textContent = `24-hour High: ${data.market_data.high_24h.usd}`
+        dayLow.textContent = `24-hour Low: ${data.market_data.low_24h.usd}`
     })
     .catch(err => console.error(err))

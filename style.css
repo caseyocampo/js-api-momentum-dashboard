@@ -30,6 +30,13 @@ main {
 }
 
 .crypto {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.crypto-header {
     align-items: center;
     display: flex;
     gap: 1em;
