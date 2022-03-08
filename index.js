@@ -7,9 +7,8 @@ const dayLow = document.getElementById('dayLow')
 const currentTimeEl = document.getElementById('currentTimeEl')
 const weather = document.getElementById('weather')
 
-fetch(
-    'https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature'
-)
+// prettier-ignore
+fetch('https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature')
     .then(res => res.json())
     .then(data => {
         let backgroundImage = data.urls.regular
@@ -30,7 +29,6 @@ fetch('https://api.coingecko.com/api/v3/coins/dogecoin')
         return res.json()
     })
     .then(data => {
-        // console.log(data)
         coinImage.src = data.image.small
         coinName.textContent = data.name
         currentPrice.textContent = `Current price: ${data.market_data.current_price.usd} USD`
