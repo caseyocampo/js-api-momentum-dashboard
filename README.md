@@ -1,6 +1,6 @@
 # Momentum Dashboard Clone Chrome Extension
 
-This project uses 3 APIs
+This project uses 3 APIs:
 
 -   Open Weather API (Scrimba's version)
 -   Upspash API (Scrimba's version)
