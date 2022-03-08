@@ -63,5 +63,6 @@ main {
 
 .weather-city {
     font-size: 1.25em;
+    margin-top: -15px;
     text-align: right;
 }
