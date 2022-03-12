@@ -11,4 +11,4 @@ This project repo can be installed as a Chrome extension or used as a website wh
 
 ## Video walkthrough of project on YouTube
 
-I've also created [a video walking through this project](https://youtu.be/4tW5L9JMq_4) to help me learn and really cement the concepts taught in this API module.
+I've also created [a video walking through of this project](https://youtu.be/4tW5L9JMq_4) to help me learn and really cement the concepts taught in this API module.
